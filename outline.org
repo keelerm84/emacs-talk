@@ -1,0 +1,127 @@
+* Emacs
+
+  Talk about how emacs is a lisp machine and what that means for customization.
+
+** Editing
+
+   Talk about the difference between model editing and the emacs way of
+   editing.  Mention how this relates to readline and the benefits of learning
+   the emacs way of doing things
+
+*** Basic key commands
+
+    - Talk about how to commands are related (C-f vs M-f)
+      - Use transpose as an example
+    - Show syntatical movements (defun)
+    - Yank and kill ring
+    - Narrowing / widening
+    - Smart find and replace with case understanding
+
+*** Window management
+
+    - Splits
+    - buffers
+    - frames
+    - emacs as a daemon
+
+** Discoverability
+
+   - Call functions interactively
+   - Find what commands are bound to a key
+   - Show commands for the current modes
+   - Read the elisp manual
+   - Learn how to say hello
+
+** Packages
+
+*** Silly Stuff First
+
+    - tetris
+    - dunnet
+    - M-x butterfly
+    - doctor
+
+*** Useful
+
+    - built in shell mode
+      - how things like find and grep integrate with it
+    - paredit
+      - Talk about the concept of modifing the AST
+    - ace-jump
+      - jump by character / word / line / window
+      - how this is also an effective way to jump between windows
+    - dired
+      - marking files with various ways
+        - regex
+        - file type
+        - manually
+      - deleting files
+      - renaming files
+    - expand-region
+      - semantic expansion and how useful that is for copying, deleting, changing
+    - multiple cursors
+      - talk about how this works better than vim
+      - more like this / next like this / all like this
+        - mention how this works well when used with narrowing
+      - mark all on this line
+      - talk about how they each have a kill ring and how that is benefical
+    - helm
+      - nice fuzzy finders
+      - switching between projects
+      - killing all buffers in a project
+      - running commands the project root
+        - shell commands
+        - various searching tools
+      - locate
+      - man pages
+    - AucTex / latex-preview-pane
+      - Show how to render mathematical formulas in line with this
+      - generate a preview and open it with an external program
+      - open pdf within the editor itself
+      - live preview as you edit
+    - yasnippet
+      - how to define your own
+      - the power of embedding lisp
+      - show php auto snippets
+    - tdd mode
+      - just demo this.  there isn't much to it
+    - undo tree
+      - just demo this
+    - stack exchange
+      - just do a basic demo
+    - restclient
+      - show this long term.  Have it already setup to be shown.  Just open
+        the file and put it into the appropriate mode so you can see how you
+        can easily share these documents
+    - org
+      - show basic format with folding
+      - embedded code
+      - show export options
+      - tables / spreadsheets
+      - capturing todo and scheduling
+        - show agenda mode
+    - magit
+      - staging files, chunks and individual regions
+      - reverting individual chunks from within the file
+      - adding remotes
+      - making / deleting branches
+      - handling merges / ediff
+      - submitting pull requests
+      - stashes
+      - adding things to local and project .gitignore
+
+** Workflows
+
+   - Show how you can query MySQL and reorder results by using rectangular
+     numbering
+   - Show how you find a change has occurred, show the commit and make a
+     branch from that commit
+
+** Finishing
+
+   - Launching vim within emacs
+   - Using evil mode to run in vim emulation
+   - Convert the presentation into a PDF
+   - Convert the presentation into a reveal.js presentation
+   - Commit and push things to github
+   - Tweet link to the document
