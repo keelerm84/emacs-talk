@@ -32,7 +32,7 @@
    - Read the elisp manual
    - Learn how to say hello
 
-** Packages
+** Customizations
 
 *** Silly Stuff First
 
@@ -41,7 +41,7 @@
     - M-x butterfly
     - doctor
 
-*** Useful
+*** Useful Packges
 
     - built in shell mode
       - how things like find and grep integrate with it
@@ -109,6 +109,11 @@
       - submitting pull requests
       - stashes
       - adding things to local and project .gitignore
+
+*** Customizations
+
+    - Hooks
+    - advice
 
 ** Workflows
 
