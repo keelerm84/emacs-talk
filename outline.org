@@ -31,7 +31,7 @@
 * An Informed Decision
 
   Most people in the tech space know about the editor wars and the various
-  supporting points of conflict:
+  points of conflict:
 
   - vim or emacs
   - modal editing or key chording
@@ -60,9 +60,9 @@
 
   Either.  Neither.  Both.
 
-  Having become quite effective in both editors has led me to the conclusion
-  that the editor war is a pointless comparison.  emacs and vim focus and
-  optimize for different experiences, so comparing them is pointless.
+  Having become quite effective in both editors led me to the conclusion that
+  the editor war is pointless.  emacs and vim focus and optimize for different
+  experiences, so comparing them is pointless.
 
   vim is all about having the most efficient editing capabilities possible.
 
@@ -71,8 +71,11 @@
 
 * But It is An Editor, right?
 
-  I'm sure we have all heard the joke that emacs is an operating system lacking
-  only a decent editor.
+  I'm sure we have all heard the joke:
+
+  #+BEGIN_QUOTE
+  emacs is an operating system lacking only a decent editor.
+  #+END_QUOTE
 
   While funny, I would argue that this statement is completely off base.
 
@@ -84,8 +87,10 @@
 
 * Editing
 
+  #+BEGIN_QUOTE
   How do you generate a random string?  Put a first year undergrad in vim and
   tell them to quit.
+  #+END_QUOTE
 
   One of the nice things about emacs is that it is accessible to people who
   aren't from a CS background.  If you want to use it like notepad for some
@@ -104,12 +109,12 @@
   the GNU Foundation.  So if you're familiar with those, you already have a
   headstart in learning emacs.
 
-  The key combinations typically follow a pattern.  C-something will perform a
-  basic action.  M-something is generally a stronger version of the control
+  The key combinations typically follow a pattern.  =C-something= will perform a
+  basic action.  =M-something= is generally a stronger version of the control
   counterpart.
 
-  - C-f to move a character.  M-f to move a word
-  - C-t will transpose a character. M-t will transpose a word
+  - =C-f= to move a character.  =M-f= to move a word
+  - =C-t= will transpose a character. =M-t= will transpose a word
 
 * Some Editing Nicities
 
@@ -118,8 +123,8 @@
   about some of the features I really like
 
   - Syntatical movement
-    - Moving by sentences with M-a / M-e
-    - Moving by defuns C-M-a / C-M-e
+    - Moving by sentences with =M-a= / =M-e=
+    - Moving by defuns =C-M-a= / =C-M-e=
   - Smart case find and replace
   - Narrowing and widening
   - The kill ring
@@ -144,15 +149,15 @@
   New users starting out will really appreciate how easy it is to learn about
   emacs.  The integrated help system is wonderful.
 
-  - Calling functions interactively with M-x
-  - Find out what a key is bound to with C-h k
-  - Show commands for the current mode with C-h m
-  - Find the value of variables with C-h v
-  - Read various help menus with C-h i
+  - Calling functions interactively with =M-x=
+  - Find out what a key is bound to with =C-h k=
+  - Show commands for the current mode with =C-h m=
+  - Find the value of variables with =C-h v=
+  - Read various help menus with =C-h i=
 
 * Let's Talk Customization
 
-  emacs is infinitely extensible, in real-time because of the way it is
+  emacs is extensible in real-time because of the way it is
   written.  Unlike other editors, emacs is a LISP machine running ontop of a
   tiny C based LISP intreperter.
 
@@ -201,7 +206,6 @@
 
   Let's take a look at some fun packages emacs provides.
 
-  - tetris
   - dunnet
   - doctor
   - M-x butterfly
@@ -234,8 +238,9 @@
   ability you would expect from such a package, with again the added benefit of
   being able to embed elisp directly into the snippet.
 
-  This means your snippets can be as arbitrarily as complex as you want to make
-  them.
+  This means your snippets can be as arbitrarily complex as you want to make
+  them.  You can also generate them on the fly, like this
+  [[https://github.com/ejmr/php-auto-yasnippets][awesome PHP package]].
 
 * multiple-cursors
 
@@ -243,6 +248,7 @@
   the emacs community adopted it.
 
   Some nice things to notice:
+
   - limit viewing to those lines with multiple cursors
   - yank-ring per cursor
 
@@ -259,13 +265,15 @@
 
   Luckily for us, restclient addresses all of those problems.
 
-  [[file:example.restclient][An example restclient document]]
+  [[file:examples/example.restclient][An example restclient document]]
 
 * AucTex / latex-preview-pane
 
   I don't do as much LaTeX as I once did, I still have an occasion to.  For
-  anyone that has ever worked worked with mathematical formulas in LaTeX can
+  anyone that has ever worked with mathematical formulas in LaTeX can
   understand how hard it is to know that you got it right.
+
+  [[file:examples/mathematics.tex][LaTeX with math equations]]
 
   While I'm workin on a file, it is sometimes nice to be able to check on my
   progress and make sure everthing is coming out okay.  Luckily, emacs has a
@@ -274,8 +282,8 @@
 * dired
 
   dired is the directory editor for emacs.  There is tons of stuff we could
-  talk about with dired, but what I really want to show is how you can rename
-  files and clean up entire directories in very short order.
+  talk about with dired, but what I really want to show is how treating
+  everything like tests helps us rename files.
 
 * projectile
 
@@ -291,8 +299,9 @@
   helm is THE package I use more than any other.  It is an "incremental
   completion and selection narrowing framework".
 
-  It let's you do fuzzy matching for opening files, running command and
-  potentially anything you want to do where multiple options might exist.
+  It let's you do fuzzy matching for opening files, running command, consulting
+  the man pages and potentially anything you want to do where multiple options
+  might exist.
 
 * magit
 
@@ -328,14 +337,15 @@
 
 * Reordering Database Records
 
-  The Problem: At work, we have a table of sources that list where a user might
-  have heard about our service.  When we populated this list, we didn't put
-  them in the order marketing prefers, so we need to fix that ordering.
+  At work, we have a table of sources that list where a user might have heard
+  about our service.  When we populated this list, we didn't put them in the
+  order marketing prefers, so we need to fix that ordering.
+
+  [[file:examples/database.sql][Database seed file]]
 
 * View the Diff of a Change
 
-  The Problem: There is a change in this file and I want to see which commit
-  introduced it.
+  There is a change in this file and I want to see which commit introduced it.
 
   There are a couple of solutions.  We can use git-time-machine or we can
   search the git log for it.
