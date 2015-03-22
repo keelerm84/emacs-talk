@@ -168,9 +168,22 @@
   don't want to.  emacs provides the concept of advice and hooks which allows
   for arbitrary code to run during different stages of execution.
 
-  TODO: Add some advice to print "ouch" whenever a line is deleted"
+  #+BEGIN_SRC emacs-lisp
+    (defadvice kill-line (after say-ouch activate)
+        (message "Ouch!"))
+  #+END_SRC
 
-  TODO: Link to an example in your config where a hook is being used.
+  #+BEGIN_SRC emacs-lisp
+    (add-hook 'go-mode-hook (lambda ()
+                              (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)
+                              (local-set-key (kbd "C-c i") 'go-goto-imports)
+                              (local-set-key (kbd "M-.") 'godef-jump)
+                              (go-eldoc-setup)
+                              (ggtags-mode 0)
+                              (if (not (string-match "go" compile-command))
+                                  (set (make-local-variable 'compile-command)
+                                       "go build -v && go test -v && go vet"))))
+  #+END_SRC
 
 * Packages and Package Management
 
@@ -246,7 +259,7 @@
 
   Luckily for us, restclient addresses all of those problems.
 
-  TODO Add a link to a restclient file already filled out.
+  [[file:example.restclient][An example restclient document]]
 
 * AucTex / latex-preview-pane
 
@@ -293,16 +306,19 @@
 
 * org-mode
 
-  It seems everyone these days is crazy for markdown.  But markdown is childs
+  It seems everyone these days is crazy for markdown.  But markdown is child's
   play next to the power of org-mode.
 
   org-mode started out as a note taking application built on top of
-  outline-mode.  It has since grew to include an agenda, the ability to clock
-  into tasks and generate reports, check off items in a list, schedule and set
-  deadlines, embed code snippets which can be evaluated in place, and have the
-  data exported in a variety of formats.
+  outline-mode.  It has since grown to include:
 
-  TODO Install org-babel and link to some examples.
+  - an agenda
+  - clock in and out of tasks
+  - maintain check lists
+  - schedule and set deadlines for TODOs
+  - define code snippets
+  - export the file into various formats
+  - so much more
 
 * Some Recent Workflows
 

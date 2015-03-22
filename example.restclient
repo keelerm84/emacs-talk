@@ -1,0 +1,19 @@
+# Get a list of 10 issues in JSON format
+GET http://www.redmine.org/issues.json?limit=10
+
+# Get a list of 10 issues in XML format
+GET http://www.redmine.org/issues.json?limit=10
+
+# You can easily post forward some json and specify the required hearders
+POST https://jira.atlassian.com/rest/api/2/search
+Content-Type: application/json
+{
+    "jql": "project = DEMO",
+    "startAt": 0,
+    "maxResults": 15,
+    "fields": [
+        "summary",
+        "status",
+        "assignee"
+    ]
+}
