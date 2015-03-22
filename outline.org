@@ -1,132 +1,314 @@
-* Emacs
+* Emacs: The One True Editor
 
-  Talk about how emacs is a lisp machine and what that means for customization.
+  A whirlwind tour of why I love Emacs.
 
-** Editing
+  Matthew M. Keeler
+  @keelerm84
 
-   Talk about the difference between model editing and the emacs way of
-   editing.  Mention how this relates to readline and the benefits of learning
-   the emacs way of doing things
+* My First Love
 
-*** Basic key commands
+  I have been a vim user for over 6 years.
 
-    - Talk about how to commands are related (C-f vs M-f)
-      - Use transpose as an example
-    - Show syntatical movements (defun)
-    - Yank and kill ring
-    - Narrowing / widening
-    - Smart find and replace with case understanding
+  In fact, I still use vim occasionally so I don't get rusty.
 
-*** Window management
+  So why make the change?
 
-    - Splits
-    - buffers
-    - frames
-    - emacs as a daemon
+* An Informed Decision
 
-** Discoverability
+  Most people in the tech space know about the editor wars and the various
+  supporting points of conflict:
 
-   - Call functions interactively
-   - Find what commands are bound to a key
-   - Show commands for the current modes
-   - Read the elisp manual
-   - Learn how to say hello
+  - vim or emacs
+  - modal editing or key chording
+  - thin editor or entire OS
 
-** Customizations
+  My default reaction was that obviously vim is better.  But considering I had
+  never tried emacs, my opinion was little more than a defense mechanism.
 
-*** Silly Stuff First
+  I didn't want to feel like I had wasted all those years.
 
-    - tetris
-    - dunnet
-    - M-x butterfly
-    - doctor
+* So What To Do
 
-*** Useful Packges
+  I figured if I was going to pick a side, it would be worthwile trying out
+  both.
 
-    - built in shell mode
-      - how things like find and grep integrate with it
-    - paredit
-      - Talk about the concept of modifing the AST
-    - ace-jump
-      - jump by character / word / line / window
-      - how this is also an effective way to jump between windows
-    - dired
-      - marking files with various ways
-        - regex
-        - file type
-        - manually
-      - deleting files
-      - renaming files
-    - expand-region
-      - semantic expansion and how useful that is for copying, deleting, changing
-    - multiple cursors
-      - talk about how this works better than vim
-      - more like this / next like this / all like this
-        - mention how this works well when used with narrowing
-      - mark all on this line
-      - talk about how they each have a kill ring and how that is benefical
-    - helm
-      - nice fuzzy finders
-      - switching between projects
-      - killing all buffers in a project
-      - running commands the project root
-        - shell commands
-        - various searching tools
-      - locate
-      - man pages
-    - AucTex / latex-preview-pane
-      - Show how to render mathematical formulas in line with this
-      - generate a preview and open it with an external program
-      - open pdf within the editor itself
-      - live preview as you edit
-    - yasnippet
-      - how to define your own
-      - the power of embedding lisp
-      - show php auto snippets
-    - tdd mode
-      - just demo this.  there isn't much to it
-    - undo tree
-      - just demo this
-    - stack exchange
-      - just do a basic demo
-    - restclient
-      - show this long term.  Have it already setup to be shown.  Just open
-        the file and put it into the appropriate mode so you can see how you
-        can easily share these documents
-    - org
-      - show basic format with folding
-      - embedded code
-      - show export options
-      - tables / spreadsheets
-      - capturing todo and scheduling
-        - show agenda mode
-    - magit
-      - staging files, chunks and individual regions
-      - reverting individual chunks from within the file
-      - adding remotes
-      - making / deleting branches
-      - handling merges / ediff
-      - submitting pull requests
-      - stashes
-      - adding things to local and project .gitignore
+  So I spent my nights and weekends playing around with emacs.  Eventually, I
+  had built up enough muscle memory and regained enough efficiency that I felt
+  I could start using it during my day job.
 
-*** Customizations
+  My vim workflow was replaced entirely by emacs during this learning process.
 
-    - Hooks
-    - advice
+  After many months of emacs, I was finally able to decide on a winner, which
+  was ...
 
-** Workflows
+* Ultimate Winner
 
-   - Show how you can query MySQL and reorder results by using rectangular
-     numbering
-   - Show how you find a change has occurred, show the commit and make a
-     branch from that commit
+  Either.  Neither.  Both.
 
-** Finishing
+  Having become quite effective in both editors has led me to the conclusion
+  that the editor war is a pointless comparison.  emacs and vim focus and
+  optimize for different experiences, so comparing them is pointless.
 
-   - Launching vim within emacs
-   - Using evil mode to run in vim emulation
-   - Convert the presentation into a PDF
-   - Convert the presentation into a reveal.js presentation
-   - Commit and push things to github
-   - Tweet link to the document
+  vim is all about having the most efficient editing capabilities possible.
+
+  emacs is all about having an integrated environment so your *workflow* is as
+  efficient as possible.
+
+* But It is An Editor, right?
+
+  I'm sure we have all heard the joke that emacs is an operating system lacking
+  only a decent editor.
+
+  While funny, I would argue that this statement is completely off base.
+
+  emacs' central tenet is that EVERYTHING should be treated as text.  And we do
+  mean everything -- source files, database connections, shells.
+
+  Considering this, it would have been foolish to build it ontop of a sub par
+  editor.
+
+* Editing
+
+  How do you generate a random string?  Put a first year undergrad in vim and
+  tell them to quit.
+
+  One of the nice things about emacs is that it is accessible to people who
+  aren't from a CS background.  If you want to use it like notepad for some
+  simple text edits, you can.
+
+  But of course the real power comes from being completely keyboard driven.
+  Instead of relying on different modes, navigation and text manipulation is
+  handled through key chords.
+
+* Escape Meta Alt Control Shift
+
+  The keychords in emacs have received a lot of slack as being difficult to
+  press or hard to remember.  In my experience, this hasn't really been the
+  case.  Muscle memory makes these so ingrained I don't even think about them
+  anymore; as it should be.
+
+  emacs navigation comes from the readline library since both were developed by
+  the GNU Foundation.  So if you're familiar with those, you already have a
+  headstart in learning emacs.
+
+  The key combinations typically follow a pattern.  C-something will perform
+  some basic action.  M-something is generally a stronger version of the
+  control counterpart.
+
+  e.g. C-f to move a character.  M-f to move a word
+       C-t will transpose a character. M-t will transpose a word
+
+* Some Editing Nicities
+
+  There is no point in going over all the editing commands as that will be
+  boring and we don't have time for all of that.  Instead, let's just talk
+  about some of the features I really like
+
+  - Syntatical movement
+    - Moving by sentences with M-a / M-e
+    - Moving by defuns C-M-a / C-M-e
+  - Smart case find and replace
+  - Narrowing and widening
+  - The kill ring
+
+* A Window By Any Other Name
+
+  The terminology around emacs' file management stuff is a little different.
+
+  There is the concept of a buffer, which may or may not be associated with a
+  file.
+
+  A window is the visible part of the screen.  If you have splits, each section
+  is a window.  A window is only ever associated with one buffer at a time,
+  though the same buffer can be associated with multiple windows.
+
+  The entire desktop application is held within a frame.  There can be multiple
+  frames opened at any time.  Each of these frames can share the same set of
+  buffers and can all connect to a central emacs daemon.
+
+* Learning About Emacs
+
+  New users starting out will really appreciate how easy it is to learn about
+  emacs.  The integrated help system is wonderful.
+
+  - Calling functions interactively with M-x
+  - Find out what a key is bound to with C-h k
+  - Show commands for the current mode with C-h m
+  - Find the value of variables with C-h v
+  - Read various help menus with C-h i
+
+* Let's Talk Customization
+
+  emacs is infinitely extensible, in real-time because of the way it is
+  written.  Unlike other editors, emacs is a LISP machine running ontop of a
+  tiny C based LISP intreperter.
+
+  This essentially means the editor is a large REPL.
+
+  Built-in functions and new features can be modified or developed, evaluated
+  and injected into the current running environment without the need to
+  restart.
+
+* Hooks and Advice
+
+  With third party and built-in packages, while you can modify the source, you
+  don't want to.  emacs provides the concept of advice and hooks which allows
+  for arbitrary code to run during different stages of execution.
+
+  TODO: Add some advice to print "ouch" whenever a line is deleted"
+  TOOD: Link to an example in your config where a hook is being used.
+
+* Packages and Package Management
+
+  Newer versions of emacs come prepackaged with a tool, package.el  This let's
+  you connect to repositories of packages, download and install packages
+  directly from within emacs.
+
+  el-get provides receipes for fetching and installing third party packages as
+  well.
+
+  And then there is cask, which let's us download packages outside of emacs to
+  help improve the startup process.  This is what I use.
+
+* Some Fun Packages
+
+  Let's take a look at some fun packages emacs provides.
+
+  - tetris
+  - dunnet
+  - doctor
+  - M-x butterfly
+
+* Some More Useful Packages
+
+  As I mentioned earlier, emacs is really about an efficient workflow.  As
+  such, there are packages to support all sorts of different tools you might
+  want to use in your workflow.
+
+  I won't go into detail on all of these, but I thought I would include a small
+  list of packages I use on a regular basis.
+
+  | eshell           | paredit   | ace-jump | dired              | expand-region |
+  | multiple-cursors | helm      | AucTex   | latex-preview-pane | yasnippet     |
+  | tdd-mode         | undo-tree | magit    | restclient         | org           |
+
+* eshell
+
+  eshell is a terminal written entirely in lisp.  It is mostly compatible with
+  bash, but it provides some additional features, like the ability to evaluate
+  elisp directly in the shell.
+
+  It has some nice integrations with common tools, like grep and find.
+
+* yasnippet
+
+  Every editor needs a decent snippet mechanism.  Yasnippet provides all the
+  ability you would expect from such a package, with again the added benefit of
+  being able to embed elisp directly into the snippet.
+
+  This means your snippets can be as arbitrarily as complex as you want to make
+  them.
+
+* multiple-cursors
+
+  Sublime Text really made multiple cursor support very popular.  So of course
+  the emacs community adopted it.
+
+  Some nice things to notice:
+  - limit viewing to those lines with multiple cursors
+  - yank-ring per cursor
+
+* restclient
+
+  Postman is a cool like extension to Chrome to perform web requests.  But
+  there are a few things I don't like.
+
+  1. There isn't a convenient way to comment on what requests mean so I can
+     refresh my memory when I return to a project later one.  This means
+     building up a multi-step workflow is a pain.
+  2. You can't easily share pre-saved requests.
+  3. Editing json bodies in the extension isn't the easiest.
+
+  Luckily for us, restclient addresses all of those problems.
+
+  TODO Add a link to a restclient file already filled out.
+
+* AucTex / latex-preview-pane
+
+  I don't do as much LaTeX as I once did, I still have an occasion to.  For
+  anyone that has ever worked worked with mathematical formulas in LaTeX can
+  understand how hard it is to know that you got it right.
+
+  While I'm workin on a file, it is sometimes nice to be able to check on my
+  progress and make sure everthing is coming out okay.  Luckily, emacs has a
+  nice package that let's me do just that.
+
+* projectile
+
+* helm
+
+  helm is THE package I use more than any other.  It is an "incremental
+  completion and selection narrowing framework".
+
+  It let's you do fuzzy matching for opening files, running command and
+  potentially anything you want to do where multiple options might exist.
+
+* magit
+
+  When I was a full time vim user, I started using fugitive to interact with
+  git from within vim.  And I thought that was the bees knees.
+
+  When I switched to emacs, I tried out magit and realized how awful fugitive
+  is in comparison.  With the ability to easily interactively stage hunks,
+  check the log, add remotes, make branches and do merging, magit makes working
+  with git a breeze.
+
+* org-mode
+
+  It seems everyone these days is crazy for markdown.  But markdown is childs
+  play next to the power of org-mode.
+
+  org-mode started out as a note taking application built on top of
+  outline-mode.  It has since grew to include an agenda, the ability to clock
+  into tasks and generate reports, check off items in a list, schedule and set
+  deadlines, embed code snippets which can be evaluated in place, and have the
+  data exported in a variety of formats.
+
+  TODO Install org-babel and link to some examples.
+
+* Some Recent Workflows
+
+  I made the assertion that emacs is all about efficient workflows.  Now that
+  we have seen some various packages I use, let's demo a couple of processes
+  that I have found useful.
+
+* Reordering Database Records
+
+  The Problem: At work, we have a table of sources that list where a user might
+  have heard about our service.  When we populated this list, we didn't put
+  them in the order marketing prefers, so we need to fix that ordering.
+
+* View the Diff of a Change
+
+  The Problem: There is a change in this file and I want to see which commit
+  introduced it.
+
+  There are a couple of solutions.  We can use git-time-machine or we can
+  search the git log for it.
+
+* vim within emacs?
+
+  For those of you that might be interested in learning more about emacs but
+  don't want to give up modal editing, there are a couple of solutions.
+
+* Wrap up
+
+  So that's it!  If you have any questions, you can always contact me on
+  twitter at @keelerm84
+
+  This presentation is available at https://github.com/keelerm84/emacs-talk.
+
+  You can view the org file directly since GitHub handles this format.  But
+  what if you prefer a reveal.js presentation?  Or PDF?
+
+  Also, I should probably tweet out the link.
