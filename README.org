@@ -1,0 +1,10 @@
+* Emacs Presentation for DevICT
+
+This repository contains the presentation I am going to present to [[http://devict.org/][DevICT]] on
+March 26th, 2015.
+
+It is written in org-mode and designed to be run through org-present.  It can
+also be exported to PDF or reveal.js with decent success.
+
+Once this talk has been recorded, I will update this README with a link to the
+video.
