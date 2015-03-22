@@ -1,17 +1,32 @@
-* Emacs: The One True Editor
-
-  A whirlwind tour of why I love Emacs.
-
-  Matthew M. Keeler
-  @keelerm84
+#+OPTIONS: reveal_center:t reveal_control:t reveal_height:-1
+#+OPTIONS: reveal_history:nil reveal_keyboard:t reveal_mathjax:nil
+#+OPTIONS: reveal_overview:t reveal_progress:t reveal_rolling_links:nil
+#+OPTIONS: reveal_slide_number:t reveal_title_slide:t reveal_width:-1
+#+REVEAL_EXTRA_CSS: reveal.css
+#+REVEAL_EXTRA_JS:
+#+REVEAL_HEAD_PREAMBLE:
+#+REVEAL_HLEVEL:
+#+REVEAL_MARGIN: -1
+#+REVEAL_MATHJAX_URL: http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+#+REVEAL_MAX_SCALE: -1
+#+REVEAL_MIN_SCALE: -1
+#+REVEAL_MULTIPLEX_ID:
+#+REVEAL_MULTIPLEX_SECRET:
+#+REVEAL_MULTIPLEX_SOCKETIO_URL:
+#+REVEAL_MULTIPLEX_URL:
+#+REVEAL_PLUGINS:
+#+REVEAL_POSTAMBLE:
+#+REVEAL_PREAMBLE:
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/2.5.0/
+#+REVEAL_SPEED: default
+#+REVEAL_THEME: default
+#+REVEAL_TRANS: default
+#+OPTIONS: num:nil toc:nil
 
 * My First Love
 
-  I have been a vim user for over 6 years.
-
-  In fact, I still use vim occasionally so I don't get rusty.
-
-  So why make the change?
+  I have been a vim user for over 6 years.  In fact, I still use vim
+  occasionally so I don't get rusty.  So why make the change?
 
 * An Informed Decision
 
@@ -41,7 +56,7 @@
   After many months of emacs, I was finally able to decide on a winner, which
   was ...
 
-* Ultimate Winner
+* And the Winner Is?
 
   Either.  Neither.  Both.
 
@@ -83,20 +98,18 @@
 * Escape Meta Alt Control Shift
 
   The keychords in emacs have received a lot of slack as being difficult to
-  press or hard to remember.  In my experience, this hasn't really been the
-  case.  Muscle memory makes these so ingrained I don't even think about them
-  anymore; as it should be.
+  press or hard to remember.
 
   emacs navigation comes from the readline library since both were developed by
   the GNU Foundation.  So if you're familiar with those, you already have a
   headstart in learning emacs.
 
-  The key combinations typically follow a pattern.  C-something will perform
-  some basic action.  M-something is generally a stronger version of the
-  control counterpart.
+  The key combinations typically follow a pattern.  C-something will perform a
+  basic action.  M-something is generally a stronger version of the control
+  counterpart.
 
-  e.g. C-f to move a character.  M-f to move a word
-       C-t will transpose a character. M-t will transpose a word
+  - C-f to move a character.  M-f to move a word
+  - C-t will transpose a character. M-t will transpose a word
 
 * Some Editing Nicities
 
@@ -156,7 +169,8 @@
   for arbitrary code to run during different stages of execution.
 
   TODO: Add some advice to print "ouch" whenever a line is deleted"
-  TOOD: Link to an example in your config where a hook is being used.
+
+  TODO: Link to an example in your config where a hook is being used.
 
 * Packages and Package Management
 
@@ -188,9 +202,10 @@
   I won't go into detail on all of these, but I thought I would include a small
   list of packages I use on a regular basis.
 
-  | eshell           | paredit   | ace-jump | dired              | expand-region |
-  | multiple-cursors | helm      | AucTex   | latex-preview-pane | yasnippet     |
-  | tdd-mode         | undo-tree | magit    | restclient         | org           |
+  | eshell             | paredit   | ace-jump | dired      |
+  | multiple-cursors   | helm      | AucTex   | tdd-mode   |
+  | latex-preview-pane | undo-tree | magit    | restclient |
+  | expand-region      | yasnippet | org-mode |            |
 
 * eshell
 
@@ -243,7 +258,20 @@
   progress and make sure everthing is coming out okay.  Luckily, emacs has a
   nice package that let's me do just that.
 
+* dired
+
+  dired is the directory editor for emacs.  There is tons of stuff we could
+  talk about with dired, but what I really want to show is how you can rename
+  files and clean up entire directories in very short order.
+
 * projectile
+
+  projectile is a project management tool.  It let's you do
+
+  - jump between projects
+  - search for files within a project
+  - search within files within a project
+  - and so much more
 
 * helm
 
