@@ -23,6 +23,12 @@
 #+REVEAL_TRANS: default
 #+OPTIONS: num:nil toc:nil
 
+* Emacs
+
+  A look at what I love about "The One True Editor"
+  Matthew M. Keeler
+  @keelerm84
+
 * My First Love
 
   I have been a vim user for over 6 years.  In fact, I still use vim
