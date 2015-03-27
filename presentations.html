@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>presentations</title>
+<meta name="author" content="(Matthew M. Keeler)"/>
+
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/2.5.0/css/reveal.css"/>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/2.5.0/css/theme/default.css" id="theme"/>
+<link rel="stylesheet" href="reveal.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'http://cdn.jsdelivr.net/reveal.js/2.5.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section>
+<h1>presentations</h1>
+<h2>Matthew M. Keeler</h2>
+<h2><a href="mailto:keelerm84@gmail.com">keelerm84@gmail.com</a></h2>
+<h2></h2>
+</section>
+
+<section id="sec-1" >
+
+<h2>Emacs</h2>
+<p>
+A look at what I love about "The One True Editor"
+Matthew M. Keeler
+@keelerm84
+</p>
+
+</section>
+<section id="sec-2" >
+
+<h2>My First Love</h2>
+<p>
+I have been a vim user for over 6 years.  In fact, I still use vim
+occasionally so I don't get rusty.  So why make the change?
+</p>
+
+</section>
+<section id="sec-3" >
+
+<h2>An Informed Decision</h2>
+<p>
+Most people in the tech space know about the editor wars and the various
+points of conflict:
+</p>
+
+<ul class="org-ul">
+<li>vim or emacs
+</li>
+<li>modal editing or key chording
+</li>
+<li>thin editor or entire OS
+</li>
+</ul>
+
+<p>
+My default reaction was that obviously vim is better.  But considering I had
+never tried emacs, my opinion was little more than a defense mechanism.
+</p>
+
+<p>
+I didn't want to feel like I had wasted all those years.
+</p>
+
+</section>
+<section id="sec-4" >
+
+<h2>So What To Do</h2>
+<p>
+I figured if I was going to pick a side, it would be worthwile trying out
+both.
+</p>
+
+<p>
+So I spent my nights and weekends playing around with emacs.  Eventually, I
+had built up enough muscle memory and regained enough efficiency that I felt
+I could start using it during my day job.
+</p>
+
+<p>
+My vim workflow was replaced entirely by emacs during this learning process.
+</p>
+
+<p>
+After many months of emacs, I was finally able to decide on a winner, which
+was &#x2026;
+</p>
+
+</section>
+<section id="sec-5" >
+
+<h2>And the Winner Is?</h2>
+<p>
+Either.  Neither.  Both.
+</p>
+
+<p>
+Having become quite effective in both editors led me to the conclusion that
+the editor war is pointless.  emacs and vim focus and optimize for different
+experiences, so comparing them is pointless.
+</p>
+
+<p>
+vim is all about having the most efficient editing capabilities possible.
+</p>
+
+<p>
+emacs is all about having an integrated environment so your <b>workflow</b> is as
+efficient as possible.
+</p>
+
+</section>
+<section id="sec-6" >
+
+<h2>But It is An Editor, right?</h2>
+<p>
+I'm sure we have all heard the joke:
+</p>
+
+<blockquote nil>
+<p>
+emacs is an operating system lacking only a decent editor.
+</p>
+</blockquote>
+
+<p>
+While funny, I would argue that this statement is completely off base.
+</p>
+
+<p>
+emacs' central tenet is that EVERYTHING should be treated as text.  And we do
+mean everything &#x2013; source files, database connections, shells.
+</p>
+
+<p>
+Considering this, it would have been foolish to build it ontop of a sub par
+editor.
+</p>
+
+</section>
+<section id="sec-7" >
+
+<h2>Editing</h2>
+<blockquote nil>
+<p>
+How do you generate a random string?  Put a first year undergrad in vim and
+tell them to quit.
+</p>
+</blockquote>
+
+<p>
+One of the nice things about emacs is that it is accessible to people who
+aren't from a CS background.  If you want to use it like notepad for some
+simple text edits, you can.
+</p>
+
+<p>
+But of course the real power comes from being completely keyboard driven.
+Instead of relying on different modes, navigation and text manipulation is
+handled through key chords.
+</p>
+
+</section>
+<section id="sec-8" >
+
+<h2>Escape Meta Alt Control Shift</h2>
+<p>
+The keychords in emacs have received a lot of slack as being difficult to
+press or hard to remember.
+</p>
+
+<p>
+emacs navigation comes from the readline library since both were developed by
+the GNU Foundation.  So if you're familiar with those, you already have a
+headstart in learning emacs.
+</p>
+
+<p>
+The key combinations typically follow a pattern.  <code>C-something</code> will perform a
+basic action.  <code>M-something</code> is generally a stronger version of the control
+counterpart.
+</p>
+
+<ul class="org-ul">
+<li><code>C-f</code> to move a character.  <code>M-f</code> to move a word
+</li>
+<li><code>C-t</code> will transpose a character. <code>M-t</code> will transpose a word
+</li>
+</ul>
+
+</section>
+<section id="sec-9" >
+
+<h2>Some Editing Nicities</h2>
+<p>
+There is no point in going over all the editing commands as that will be
+boring and we don't have time for all of that.  Instead, let's just talk
+about some of the features I really like
+</p>
+
+<ul class="org-ul">
+<li>Syntatical movement
+<ul class="org-ul">
+<li>Moving by sentences with <code>M-a</code> / <code>M-e</code>
+</li>
+<li>Moving by defuns <code>C-M-a</code> / <code>C-M-e</code>
+</li>
+</ul>
+</li>
+<li>Smart case find and replace
+</li>
+<li>Narrowing and widening
+</li>
+<li>The kill ring
+</li>
+</ul>
+
+</section>
+<section id="sec-10" >
+
+<h2>A Window By Any Other Name</h2>
+<p>
+The terminology around emacs' file management stuff is a little different.
+</p>
+
+<p>
+There is the concept of a buffer, which may or may not be associated with a
+file.
+</p>
+
+<p>
+A window is the visible part of the screen.  If you have splits, each section
+is a window.  A window is only ever associated with one buffer at a time,
+though the same buffer can be associated with multiple windows.
+</p>
+
+<p>
+The entire desktop application is held within a frame.  There can be multiple
+frames opened at any time.  Each of these frames can share the same set of
+buffers and can all connect to a central emacs daemon.
+</p>
+
+</section>
+<section id="sec-11" >
+
+<h2>Learning About Emacs</h2>
+<p>
+New users starting out will really appreciate how easy it is to learn about
+emacs.  The integrated help system is wonderful.
+</p>
+
+<ul class="org-ul">
+<li>Calling functions interactively with <code>M-x</code>
+</li>
+<li>Find out what a key is bound to with <code>C-h k</code>
+</li>
+<li>Show commands for the current mode with <code>C-h m</code>
+</li>
+<li>Find the value of variables with <code>C-h v</code>
+</li>
+<li>Read various help menus with <code>C-h i</code>
+</li>
+</ul>
+
+</section>
+<section id="sec-12" >
+
+<h2>Let's Talk Customization</h2>
+<p>
+emacs is extensible in real-time because of the way it is
+written.  Unlike other editors, emacs is a LISP machine running ontop of a
+tiny C based LISP intreperter.
+</p>
+
+<p>
+This essentially means the editor is a large REPL.
+</p>
+
+<p>
+Built-in functions and new features can be modified or developed, evaluated
+and injected into the current running environment without the need to
+restart.
+</p>
+
+</section>
+<section id="sec-13" >
+
+<h2>Hooks and Advice</h2>
+<p>
+With third party and built-in packages, while you can modify the source, you
+don't want to.  emacs provides the concept of advice and hooks which allows
+for arbitrary code to run during different stages of execution.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-emacs-lisp">(<span style="color: #F0DFAF; font-weight: bold;">defadvice</span> <span style="color: #93E0E3;">kill-line</span> (after say-ouch activate)
+    (message <span style="color: #CC9393;">"Ouch!"</span>))
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre  class="src src-emacs-lisp">(add-hook 'go-mode-hook (<span style="color: #F0DFAF; font-weight: bold;">lambda</span> ()
+                          (local-set-key (kbd <span style="color: #CC9393;">"C-c C-r"</span>) 'go-remove-unused-imports)
+                          (local-set-key (kbd <span style="color: #CC9393;">"C-c i"</span>) 'go-goto-imports)
+                          (local-set-key (kbd <span style="color: #CC9393;">"M-."</span>) 'godef-jump)
+                          (go-eldoc-setup)
+                          (ggtags-mode 0)
+                          (<span style="color: #F0DFAF; font-weight: bold;">if</span> (not (string-match <span style="color: #CC9393;">"go"</span> compile-command))
+                              (set (make-local-variable 'compile-command)
+                                   <span style="color: #CC9393;">"go build -v &amp;&amp; go test -v &amp;&amp; go vet"</span>))))
+</pre>
+</div>
+
+</section>
+<section id="sec-14" >
+
+<h2>Packages and Package Management</h2>
+<p>
+Newer versions of emacs come prepackaged with a tool, package.el  This let's
+you connect to repositories of packages, download and install packages
+directly from within emacs.
+</p>
+
+<p>
+el-get provides receipes for fetching and installing third party packages as
+well.
+</p>
+
+<p>
+And then there is cask, which let's us download packages outside of emacs to
+help improve the startup process.  This is what I use.
+</p>
+
+</section>
+<section id="sec-15" >
+
+<h2>Some Fun Packages</h2>
+<p>
+Let's take a look at some fun packages emacs provides.
+</p>
+
+<ul class="org-ul">
+<li>dunnet
+</li>
+<li>doctor
+</li>
+<li>M-x butterfly
+</li>
+</ul>
+
+</section>
+<section id="sec-16" >
+
+<h2>Some More Useful Packages</h2>
+<p>
+As I mentioned earlier, emacs is really about an efficient workflow.  As
+such, there are packages to support all sorts of different tools you might
+want to use in your workflow.
+</p>
+
+<p>
+I won't go into detail on all of these, but I thought I would include a small
+list of packages I use on a regular basis.
+</p>
+
+<table nil>
+<tbody>
+<tr>
+<td class="left">eshell</td>
+<td class="left">paredit</td>
+<td class="left">ace-jump</td>
+<td class="left">dired</td>
+</tr>
+
+<tr>
+<td class="left">multiple-cursors</td>
+<td class="left">helm</td>
+<td class="left">AucTex</td>
+<td class="left">tdd-mode</td>
+</tr>
+
+<tr>
+<td class="left">latex-preview-pane</td>
+<td class="left">undo-tree</td>
+<td class="left">magit</td>
+<td class="left">restclient</td>
+</tr>
+
+<tr>
+<td class="left">expand-region</td>
+<td class="left">yasnippet</td>
+<td class="left">org-mode</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="sec-17" >
+
+<h2>eshell</h2>
+<p>
+eshell is a terminal written entirely in lisp.  It is mostly compatible with
+bash, but it provides some additional features, like the ability to evaluate
+elisp directly in the shell.
+</p>
+
+<p>
+It has some nice integrations with common tools, like grep and find.
+</p>
+
+</section>
+<section id="sec-18" >
+
+<h2>yasnippet</h2>
+<p>
+Every editor needs a decent snippet mechanism.  Yasnippet provides all the
+ability you would expect from such a package, with again the added benefit of
+being able to embed elisp directly into the snippet.
+</p>
+
+<p>
+This means your snippets can be as arbitrarily complex as you want to make
+them.  You can also generate them on the fly, like this
+<a href="https://github.com/ejmr/php-auto-yasnippets">awesome PHP package</a>.
+</p>
+
+</section>
+<section id="sec-19" >
+
+<h2>multiple-cursors</h2>
+<p>
+Sublime Text really made multiple cursor support very popular.  So of course
+the emacs community adopted it.
+</p>
+
+<p>
+Some nice things to notice:
+</p>
+
+<ul class="org-ul">
+<li>limit viewing to those lines with multiple cursors
+</li>
+<li>yank-ring per cursor
+</li>
+</ul>
+
+</section>
+<section id="sec-20" >
+
+<h2>restclient</h2>
+<p>
+Postman is a cool like extension to Chrome to perform web requests.  But
+there are a few things I don't like.
+</p>
+
+<ol class="org-ol">
+<li>There isn't a convenient way to comment on what requests mean so I can
+refresh my memory when I return to a project later one.  This means
+building up a multi-step workflow is a pain.
+</li>
+<li>You can't easily share pre-saved requests.
+</li>
+<li>Editing json bodies in the extension isn't the easiest.
+</li>
+</ol>
+
+<p>
+Luckily for us, restclient addresses all of those problems.
+</p>
+
+<p>
+<a href="examples/example.restclient">An example restclient document</a>
+</p>
+
+</section>
+<section id="sec-21" >
+
+<h2>AucTex / latex-preview-pane</h2>
+<p>
+I don't do as much LaTeX as I once did, I still have an occasion to.  For
+anyone that has ever worked with mathematical formulas in LaTeX can
+understand how hard it is to know that you got it right.
+</p>
+
+<p>
+<a href="examples/mathematics.tex">LaTeX with math equations</a>
+</p>
+
+<p>
+While I'm workin on a file, it is sometimes nice to be able to check on my
+progress and make sure everthing is coming out okay.  Luckily, emacs has a
+nice package that let's me do just that.
+</p>
+
+</section>
+<section id="sec-22" >
+
+<h2>dired</h2>
+<p>
+dired is the directory editor for emacs.  There is tons of stuff we could
+talk about with dired, but what I really want to show is how treating
+everything like tests helps us rename files.
+</p>
+
+</section>
+<section id="sec-23" >
+
+<h2>projectile</h2>
+<p>
+projectile is a project management tool.  It let's you do
+</p>
+
+<ul class="org-ul">
+<li>jump between projects
+</li>
+<li>search for files within a project
+</li>
+<li>search within files within a project
+</li>
+<li>and so much more
+</li>
+</ul>
+
+</section>
+<section id="sec-24" >
+
+<h2>helm</h2>
+<p>
+helm is THE package I use more than any other.  It is an "incremental
+completion and selection narrowing framework".
+</p>
+
+<p>
+It let's you do fuzzy matching for opening files, running command, consulting
+the man pages and potentially anything you want to do where multiple options
+might exist.
+</p>
+
+</section>
+<section id="sec-25" >
+
+<h2>magit</h2>
+<p>
+When I was a full time vim user, I started using fugitive to interact with
+git from within vim.  And I thought that was the bees knees.
+</p>
+
+<p>
+When I switched to emacs, I tried out magit and realized how awful fugitive
+is in comparison.  With the ability to easily interactively stage hunks,
+check the log, add remotes, make branches and do merging, magit makes working
+with git a breeze.
+</p>
+
+</section>
+<section id="sec-26" >
+
+<h2>org-mode</h2>
+<p>
+It seems everyone these days is crazy for markdown.  But markdown is child's
+play next to the power of org-mode.
+</p>
+
+<p>
+org-mode started out as a note taking application built on top of
+outline-mode.  It has since grown to include:
+</p>
+
+<ul class="org-ul">
+<li>an agenda
+</li>
+<li>clock in and out of tasks
+</li>
+<li>maintain check lists
+</li>
+<li>schedule and set deadlines for TODOs
+</li>
+<li>define code snippets
+</li>
+<li>export the file into various formats
+</li>
+<li>so much more
+</li>
+</ul>
+
+</section>
+<section id="sec-27" >
+
+<h2>Some Recent Workflows</h2>
+<p>
+I made the assertion that emacs is all about efficient workflows.  Now that
+we have seen some various packages I use, let's demo a couple of processes
+that I have found useful.
+</p>
+
+</section>
+<section id="sec-28" >
+
+<h2>Reordering Database Records</h2>
+<p>
+At work, we have a table of sources that list where a user might have heard
+about our service.  When we populated this list, we didn't put them in the
+order marketing prefers, so we need to fix that ordering.
+</p>
+
+<p>
+<a href="examples/database.sql">Database seed file</a>
+</p>
+
+</section>
+<section id="sec-29" >
+
+<h2>View the Diff of a Change</h2>
+<p>
+There is a change in this file and I want to see which commit introduced it.
+</p>
+
+<p>
+There are a couple of solutions.  We can use git-time-machine or we can
+search the git log for it.
+</p>
+
+</section>
+<section id="sec-30" >
+
+<h2>vim within emacs?</h2>
+<p>
+For those of you that might be interested in learning more about emacs but
+don't want to give up modal editing, there are a couple of solutions.
+</p>
+
+</section>
+<section id="sec-31" >
+
+<h2>Wrap up</h2>
+<p>
+So that's it!  If you have any questions, you can always contact me on
+twitter at @keelerm84
+</p>
+
+<p>
+This presentation is available at <a href="https://github.com/keelerm84/emacs-talk">https://github.com/keelerm84/emacs-talk</a>.
+</p>
+
+<p>
+You can view the org file directly since GitHub handles this format.  But
+what if you prefer a reveal.js presentation?  Or PDF?
+</p>
+
+<p>
+Also, I should probably tweet out the link.
+</p>
+</section>
+</div>
+</div>
+
+<script src="http://cdn.jsdelivr.net/reveal.js/2.5.0/lib/js/head.min.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/2.5.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: true,
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+
+]
+});
+</script>
+</body>
+</html>
