@@ -6,5 +6,4 @@ March 26th, 2015.
 It is written in org-mode and designed to be run through org-present.  It can
 also be exported to PDF or reveal.js with decent success.
 
-Once this talk has been recorded, I will update this README with a link to the
-video.
+You are also [[https://www.youtube.com/watch?v%3D3Z4xLZot5h4][watch the recording here]].
